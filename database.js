@@ -4,7 +4,7 @@ const connection = mysql.createConnection({
 
     host: 'localhost',
     user: 'root',
-    password: 'riddhi88@abc',
+    password: 'password',
     database: 'ecourt_database',
 
 })
