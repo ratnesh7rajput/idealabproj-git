@@ -1,0 +1,30 @@
+.registration-form{
+    
+    text-align: center;
+   
+   
+}
+.reg-heading {
+    margin-top: 30px;
+
+}
+.form-container{
+    padding: 50px;
+    
+}
+.register-box{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #7998fdd9;
+    
+    position:absolute;
+    left:510px;
+    color:floralwhite;
+    width: 500px;
+
+ 
+
+}
