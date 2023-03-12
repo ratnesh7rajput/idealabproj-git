@@ -1,5 +1,7 @@
 import "./createuser.css";
- function Createuser() {
+import { Navigate, useNavigate } from "react-router-dom";
+export default function Createuser() {
+  
   return (
     <>
       <div className="container text-center">
@@ -20,7 +22,7 @@ import "./createuser.css";
               id="floatingInput"
               placeholder="John@21"
             />
-            <label for="floatingInput">username</label>
+            <label for="floatingInput">Police Number</label>
           </div>
           <div class="form-floating  mb-3 w-70">
             <input
@@ -54,5 +56,5 @@ import "./createuser.css";
     </>
   )
 }
-export default Createuser;
+ 
 

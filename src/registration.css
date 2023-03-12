@@ -1,6 +1,7 @@
 .registration-form{
     
     text-align: center;
+
    
    
 }
@@ -14,17 +15,47 @@
 }
 .register-box{
     display: flex;
+    border-radius: 45px;
     justify-content: center;
+    align-content: space-around;
     text-align: center;
     flex-wrap: wrap;
     flex-direction: column;
-    background-color: #7998fdd9;
+    background-color:rgb(216,216,216);
     
     position:absolute;
-    left:510px;
-    color:floralwhite;
-    width: 500px;
+    left:750px;
+    color:rgb(24,39,71);
+    width: 700px;
 
  
 
 }
+.registration-form > div{
+    margin:15px 15px;
+
+}
+.location{
+    display:flex;
+    
+    justify-content: baseline;
+    text-align: center;
+}
+.location>div{
+    margin:10px;
+    
+}
+@keyframes slide-in {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+
+  .register-box {
+    animation: slide-in 1000ms;
+    animation-timing-function: linear;
+  }
+

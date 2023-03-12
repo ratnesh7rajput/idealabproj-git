@@ -1,6 +1,40 @@
-.nav-link{
-    font-weight: bold;
-}
+
 #H{
     text-align: center;
+    color:rgb(216,216,216)
+}
+.alert-primary{
+    color:rgb(216,216,216);
+    background-color: rgb(24,39,71);
+
+}
+.navbar.navbar-expand-lg.bg-body-primary{
+    background-color: rgb(216,216,216);
+    font-weight: bold;
+}
+.collapse.navbar-collapse{
+    color: rgb(24,39,71);
+font-size: 18px;
+font-family: sans-serif;
+font-weight: bold;
+
+}
+.navbar-brand{
+font-size: 28px;
+
+}
+.nav-link:hover{
+    background-color:rgb(24,39,71);
+    color:rgb(216,216,216);
+}
+.btn{
+    background-color: rgb(24,39,71);
+    color:rgb(216,216,216);
+    box-shadow: 0 10px rgb(147, 140, 140);
+}
+   
+.btn:hover{
+    color:rgb(24,39,71);
+    background-color: rgb(216,216,216);
+    border:2px solid rgb(24,39,71);
 }

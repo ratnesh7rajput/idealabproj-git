@@ -6,15 +6,19 @@
     align-items: center;
     flex-wrap: wrap;
     text-align: center;
+    border-radius: 20px;
+    position: absolute;
+    left: 800px;
     
     width: 700px;
     max-width: 400px;
-    background-color:#7998fdd9;
+    background-color:rgb(216,216,216);
     height: 400px;
 }
 .L{
     text-align: center;
-    color: antiquewhite;
+    color: rgb(24,39,71);
+    
 }
 .input-group {
     margin:20px;
@@ -27,5 +31,23 @@
     --bs-btn-hover-bg: #05357a;
 }
 .link{
-    color:rgb(248, 248, 248);
+    color:rgb(24,39,71);
 }
+
+@keyframes drop-in {
+    from {
+      transform:
+        rotate(-30deg) translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform:
+        rotate(0deg) translateY(0%);
+      opacity: 1;
+    }
+  }
+
+  .container {
+    animation: drop-in 1000ms;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }

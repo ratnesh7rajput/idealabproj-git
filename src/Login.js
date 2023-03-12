@@ -14,7 +14,7 @@
 <input className="form-control" type="password" placeholder="Password" aria-label="default input example"/>
 </div>
   
-  <button type="submit" className="btn btn-primary" id="btn-login">login</button>
+  <button type="submit" className="btn btn-primary" id="btn-login">Submit</button>
   <br/>
   <Link to='/register' className="link">create an account</Link>
 </form>

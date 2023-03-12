@@ -10,3 +10,8 @@
    
    margin:350px;
   }
+  body{
+    background-image:url("lady.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

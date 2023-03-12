@@ -1,6 +1,15 @@
-ul{
-    list-style-type:none ;
+.container.text-center{
+    position:absolute;
+   top:250px;
+   border-radius: 30px;
+
 }
-.row align-items-center{
-    background-color: #01579B;
+.row.align-items-center.bg-light{
+    border:2px solid rgb(24,39,71);
+    border-radius: 30px;
+    background-color: rgb(216,216,216);
+    color:rgb(24,39,71);
+    width:400px;
+    height:800px;
+
 }
