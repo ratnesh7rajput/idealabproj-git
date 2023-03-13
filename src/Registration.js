@@ -1,11 +1,35 @@
 import React from "react";
 import "./registration.css";
 import { useState } from "react";
+import axios from "axios"
 
 import { useNavigate } from "react-router-dom";
 
 export default function Registration() {
   const navigate = useNavigate()
+  const[username,setUsername]=useState("")
+  const[email,setEmail]=useState("")
+  const[phone,setPhone]=useState("")
+  const[police,setPolice]=useState("")
+  const[aadhar,setAadhar]=useState("")
+  const[city,setCity]=useState("")
+  const[zip,setZip]=useState("")
+   let Submit=async(e)=>{
+    e.preventDefault()
+
+    try{
+      await axios.post("http://localhost:5000/",{
+        username,email,phone,police,aadhar,city,zip
+      })
+      console.log(username);
+
+    }
+    catch(e){
+      console.log(e);
+      console.log("data");
+    }
+  }
+
 
   return (
     <div className="register-box">
@@ -19,7 +43,7 @@ export default function Registration() {
           <div className="row mb-3">
             <label htmlFor="name" className="col-sm-2 col-form-label"> Name</label>
              <div className="col-sm-10">
-              <input type="text" className="form-control"  required/>
+              <input type="text" onChange={(e)=>{setUsername(e.target.value);}} className="form-control"  required/>
             </div>
           </div>
 
@@ -28,7 +52,7 @@ export default function Registration() {
               Email
             </label>
             <div className="col-sm-10">
-              <input type="email" className="form-control" id="inputEmail5" required />
+              <input type="email"  onChange={(e)=>{setEmail(e.target.value);}} className="form-control" id="inputEmail5" required />
             </div>
           </div>
           {/* <div className="row mb-3">
@@ -49,7 +73,7 @@ export default function Registration() {
               Phone no.
             </label>
             <div className="col-sm-10">
-              <input type="tel" id="phone"  className="form-control " name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required/>
+              <input type="tel" onChange={(e)=>{setPhone(e.target.value);}} id="phone"  className="form-control " name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required/>
             </div>
           </div>
 
@@ -58,7 +82,7 @@ export default function Registration() {
              Police no.
             </label>
             <div className="col-sm-10">
-              <input type="text" id="Police"  className="form-control " name="Police"  required/>
+              <input type="text" id="Police" onChange={(e)=>{setPolice(e.target.value);}} className="form-control " name="Police"  required/>
             </div>
             </div>
 
@@ -67,7 +91,7 @@ export default function Registration() {
              Aadhar no.
             </label>
             <div className="col-sm-10">
-              <input type="text" id="aadhar"  className="form-control " name="Aadhar"  required/>
+              <input type="text"  onChange={(e)=>{setAadhar(e.target.value);}}id="aadhar"  className="form-control " name="Aadhar"  required/>
             </div>
             </div>
 
@@ -119,16 +143,16 @@ export default function Registration() {
 
   <div class="col-md-6">
     <label for="inputCity" className="col-sm-2 col-form-label">City</label>
-    <input type="text" className="form-control" id="inputCity"/>
+    <input type="text" onChange={(e)=>{setCity(e.target.value);}}className="form-control" id="inputCity"/>
   </div>
 
   <div class="col-md-2">
     <label for="inputZip" className="form-label">Zip</label>
-    <input type="text" className="form-control" id="inputZip"/>
+    <input type="text" onChange={(e)=>{setZip(e.target.value);}}className="form-control" id="inputZip"/>
   </div>
   </div>
           
-          <button className="btn btn-primary" type="submit"  onClick={() => navigate('/createuser')}>
+          <button className="btn btn-primary" type="submit"  onClick={Submit}>
             Submit
           </button>
         </form>
